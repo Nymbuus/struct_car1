@@ -11,6 +11,7 @@ enum car_transmission
 	CAR_TRANSMISSION_AUTOMATIC,
 	CAR_TRANSMISSION_NULL
 };
+
 // struct som innehåller alla bilarna.
 struct car
 {
@@ -28,7 +29,6 @@ void car_init(struct car* self,
 			  char* color,
 			  int year_of_launch,
 			  enum car_transmission transmission);
-
 void car_clear(struct car* self);
 struct car* car_new(char* brand,
 	                char* model,

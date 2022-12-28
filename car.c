@@ -22,6 +22,11 @@ void car_init(struct car* self,
 	self->transmission = transmission;
 }
 
+/********************************************************************************
+* car_new: allokerar minne för nytt objekt, funkar det ej så returneras 0.
+*          Nytt objekt initieras med dem parameterar som skickats med i
+*          funktionen.
+********************************************************************************/
 struct car* car_new(char* brand,
                	    char* model,
 	                char* color,
@@ -34,6 +39,11 @@ struct car* car_new(char* brand,
 	return self;
 }
 
+/********************************************************************************
+* car_delete: Tar bort heapallokerat objekt genom att frigöra minnet.
+*             Pekaren till objektet sätts till NULL för att inte lämna en
+*             "dinglande pekare".
+********************************************************************************/
 void car_delete(struct car** self)
 {
 	free(*self);
